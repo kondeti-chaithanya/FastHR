@@ -1,0 +1,242 @@
+/* ---------------------------------------------------------
+   GLOBAL STYLE
+----------------------------------------------------------*/
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #dfe9f3, #f7f9fc);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ---------------------------------------------------------
+   FIXED HEADER
+----------------------------------------------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 0;
+    border-bottom: 2px solid #dfdfff;
+    text-align: center;
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #4a4a9a;
+}
+
+/* ---------------------------------------------------------
+   FIXED SIDEBAR
+----------------------------------------------------------*/
+.sidebar {
+    position: fixed;
+    top: 70px; /* below header */
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 70px);
+    background: #ffffff;
+    border-right: 2px solid #dcdcf9;
+    padding-top: 20px;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.05);
+}
+
+.sidebar button {
+    width: 80%;
+    padding: 12px;
+    margin: 12px auto;
+    display: block;
+    background: #6c63ff;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #5148d8;
+    transform: translateX(4px);
+    box-shadow: 0px 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* ---------------------------------------------------------
+   MAIN CONTENT AREA
+----------------------------------------------------------*/
+.content {
+    margin-left: 260px; /* space for sidebar */
+    margin-top: 100px;  /* space for header */
+    padding: 20px;
+}
+
+/* ---------------------------------------------------------
+   CONTAINER CARD STYLE
+----------------------------------------------------------*/
+.container {
+    background: white;
+    width: 75%;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1.5px solid #e0e0e0;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.12);
+    transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 35px rgba(0,0,0,0.17);
+}
+
+.container h2 {
+    color: #4a4a9a;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* ---------------------------------------------------------
+   LABEL + INPUT COMBO
+----------------------------------------------------------*/
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #4a4a9a;
+    margin-left: 5px;
+}
+
+.input-group input {
+    width: 98%;
+    padding: 13px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 2px solid #d0d0ff;
+    background: #fafaff;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0px 0px 10px rgba(108, 99, 255, 0.4);
+}
+
+/* ---------------------------------------------------------
+   BUTTON STYLE (Purple)
+----------------------------------------------------------*/
+button {
+    width: 50%;
+    padding: 14px;
+    margin: 20px auto;
+    display: block;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #6c63ff;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5148d8;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* ---------------------------------------------------------
+   EMPLOYEE LIST
+----------------------------------------------------------*/
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background: #f4f4ff;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 6px solid #6c63ff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   LOGIN PAGE STYLE
+----------------------------------------------------------*/
+.full-page-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: white;
+    width: 350px;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0px 12px 35px rgba(0,0,0,0.22);
+    text-align: center;
+    border: 2px solid #eceaff;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.login-container h1 {
+    margin-bottom: 25px;
+    color: #4a4a9a;
+    font-size: 26px;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #d0d0ff;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #fafaff;
+    transition: 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+}
+
+.login-container button {
+    width: 95%;
+    background: #6c63ff;
+}
+
+.login-container button:hover {
+    background: #5148d8;
+    transform: translateY(-3px);
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0px); }
+}

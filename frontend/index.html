@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FastHR - Employee Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FIXED HEADER -->
+  <div class="header">
+    <h1>FastHR – Employee Management</h1>
+  </div>
+
+  <!-- FIXED SIDEBAR -->
+  <div class="sidebar">
+    <button onclick="showSection('addSection')">Add Employee</button>
+    <button onclick="showSection('viewSection')">Employee Database</button>
+    <button onclick="showSection('updateSection')">Update Employee</button>
+    <button onclick="showSection('deleteSection')">Delete Employee</button>
+  </div>
+
+  <!-- MAIN CONTENT AREA -->
+  <div class="content">
+
+    <!-- ADD EMPLOYEE SECTION -->
+    <div id="addSection" class="container section">
+      <h2>Add Employee</h2>
+
+      <div class="input-group">
+        <label>Employee ID (optional)</label>
+        <input id="empId" placeholder="Enter employee id (optional — leave blank to auto-generate)">
+      </div>
+
+      <div class="input-group">
+        <label>Employee Name</label>
+        <input id="empName" placeholder="Enter employee full name (e.g., John Doe)">
+      </div>
+
+      <div class="input-group">
+        <label>Role</label>
+        <input id="role" placeholder="e.g., CEO, Manager, Team Lead, Intern">
+      </div>
+
+      <div class="input-group">
+        <label>Address</label>
+        <input id="address" placeholder="Enter address (e.g., 123 Main St, Hyderabad)">
+      </div>
+
+      <div class="input-group">
+        <label>Tech Stack</label>
+        <input id="tech" placeholder="e.g., Python, FastAPI, React, PostgreSQL">
+      </div>
+
+      <div class="input-group">
+        <label>Experience (Years)</label>
+        <input id="experience" type="number" min="0" placeholder="Years of experience (e.g., 3)">
+      </div>
+
+      <div class="input-group">
+        <label>Year of Joining</label>
+        <input id="joining" type="text" placeholder="dd-mm-yyyy (e.g., 25-06-2022)">
+      </div>
+
+      <button onclick="saveEmployee()">Save Employee</button>
+    </div>
+
+    <!-- VIEW DATABASE SECTION -->
+    <div id="viewSection" class="container section" style="display:none;">
+      <h2>Employee Database</h2>
+      <button onclick="loadEmployees()">Refresh</button>
+      <ul id="employeeList"></ul>
+    </div>
+
+    <!-- UPDATE EMPLOYEE SECTION -->
+    <div id="updateSection" class="container section" style="display:none;">
+      <h2>Update Employee</h2>
+
+      <div class="input-group">
+        <label>Employee ID (Required)</label>
+        <input id="updateId" type="number" placeholder="Enter employee ID (e.g., 1)">
+      </div>
+
+      <div class="input-group">
+        <label>New Name</label>
+        <input id="updateName" placeholder="Update name (optional)">
+      </div>
+
+      <div class="input-group">
+        <label>New Role</label>
+        <input id="updateRole" placeholder="Update role (optional)">
+      </div>
+
+      <div class="input-group">
+        <label>New Address</label>
+        <input id="updateAddress" placeholder="Update address (optional)">
+      </div>
+
+      <div class="input-group">
+        <label>New Tech Stack</label>
+        <input id="updateTech" placeholder="Update tech stack (optional)">
+      </div>
+
+      <div class="input-group">
+        <label>New Experience</label>
+        <input id="updateExperience" type="number" placeholder="Update experience (optional)">
+      </div>
+
+      <button onclick="updateEmployee()">Update Employee</button>
+    </div>
+
+    <!-- DELETE EMPLOYEE SECTION -->
+    <div id="deleteSection" class="container section" style="display:none;">
+      <h2>Delete Employee</h2>
+
+      <div class="input-group">
+        <label>Employee ID</label>
+        <input id="deleteId" type="number" placeholder="Enter employee ID to delete">
+      </div>
+
+      <button onclick="deleteEmployee()">Delete Employee</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
